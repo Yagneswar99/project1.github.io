@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A clean personal website and project showcase." />
+    <title>Your Name — Digital maker</title>
+    <style>
+      :root { --ink:#18201b; --muted:#657066; --paper:#f6f5ef; --card:#fffefa; --accent:#d8ff58; --line:#d9ddd3; }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      a { color:inherit; text-decoration:none; }
+      .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+      nav { display:flex; align-items:center; justify-content:space-between; padding:24px 0; }
+      .brand { font-weight:800; letter-spacing:-.06em; font-size:1.25rem; }
+      nav ul { display:flex; gap:22px; margin:0; padding:0; list-style:none; color:var(--muted); font-size:.92rem; }
+      nav a:hover { color:var(--ink); }
+      .hero { padding:86px 0 68px; display:grid; grid-template-columns:1.35fr .65fr; gap:42px; align-items:end; }
+      .eyebrow { text-transform:uppercase; letter-spacing:.15em; color:var(--muted); font-size:.72rem; font-weight:700; }
+      h1 { font-size:clamp(3.2rem, 8vw, 7.4rem); line-height:.9; letter-spacing:-.085em; margin:18px 0 28px; max-width:850px; }
+      .hero p { max-width:500px; color:var(--muted); font-size:1.08rem; }
+      .availability { border-top:1px solid var(--ink); padding-top:14px; font-size:.9rem; }
+      .dot { display:inline-block; width:9px; height:9px; border-radius:50%; background:#78aa00; margin-right:7px; }
+      .button { display:inline-flex; align-items:center; gap:10px; margin-top:19px; padding:12px 18px; border:1px solid var(--ink); border-radius:999px; font-weight:700; transition:.2s ease; }
+      .button:hover { background:var(--ink); color:white; transform:translateY(-2px); }
+      section { padding:88px 0; border-top:1px solid var(--line); }
+      .section-title { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:28px; }
+      h2 { margin:0; font-size:clamp(1.8rem, 4vw, 3rem); letter-spacing:-.06em; }
+      .projects { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+      .project { min-height:340px; display:flex; flex-direction:column; justify-content:flex-end; border:1px solid var(--line); border-radius:16px; padding:24px; background:var(--card); overflow:hidden; transition:.25s ease; }
+      .project:hover { transform:translateY(-6px); box-shadow:0 16px 35px rgba(24,32,27,.09); }
+      .project::before { content:""; display:block; flex:1; margin-bottom:30px; border-radius:10px; background:linear-gradient(135deg,#d8ff58 0%,#fdfdf9 72%); }
+      .project:nth-child(2)::before { background:linear-gradient(135deg,#d8e9ff,#fffefa 72%); }
+      .project:nth-child(3)::before { background:linear-gradient(135deg,#ffe6b3,#fffefa 72%); }
+      .project h3 { margin:0; font-size:1.25rem; letter-spacing:-.04em; }
+      .project p { color:var(--muted); margin:6px 0 0; font-size:.9rem; }
+      .about { display:grid; grid-template-columns:.7fr 1.3fr; gap:80px; }
+      .about p { font-size:clamp(1.35rem, 2.3vw, 2rem); line-height:1.3; letter-spacing:-.045em; margin:0; }
+      .contact { text-align:center; padding:110px 0; }
+      .contact h2 { max-width:680px; margin:0 auto 24px; }
+      footer { border-top:1px solid var(--line); padding:25px 0 35px; color:var(--muted); display:flex; justify-content:space-between; font-size:.85rem; }
+      @media (max-width:720px) { nav ul { display:none; } .hero,.about { grid-template-columns:1fr; gap:28px; padding:58px 0; } .projects { grid-template-columns:1fr; } .project { min-height:280px; } section { padding:62px 0; } footer { gap:12px; flex-direction:column; } }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#top">YN.</a>
+        <ul><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
+      </nav>
+      <main id="top">
+        <section class="hero" style="border:0">
+          <div>
+            <span class="eyebrow">Portfolio · 2026</span>
+            <h1>Ideas made clear.</h1>
+            <p>I’m Your Name, a designer and developer making thoughtful digital experiences for people and brands.</p>
+            <a class="button" href="#work">See selected work <span>↓</span></a>
+          </div>
+          <div class="availability"><span class="dot"></span>Available for selected projects</div>
+        </section>
+
+        <section id="work">
+          <div class="section-title"><h2>Selected work</h2><span class="eyebrow">01—03</span></div>
+          <div class="projects">
+            <a class="project" href="#contact"><h3>Northstar Finance</h3><p>Brand, product design, web</p></a>
+            <a class="project" href="#contact"><h3>Common Ground</h3><p>Strategy, identity, ecommerce</p></a>
+            <a class="project" href="#contact"><h3>Daylight Journal</h3><p>Mobile product, art direction</p></a>
+          </div>
+        </section>
+
+        <section id="about" class="about">
+          <span class="eyebrow">A little about me</span>
+          <p>I care about the small, human details that turn useful products into memorable ones. I work from first thought to final pixel, in close partnership with ambitious teams.</p>
+        </section>
+
+        <section id="contact" class="contact">
+          <span class="eyebrow">Have a project in mind?</span>
+          <h2>Let’s make something people want to use.</h2>
+          <a class="button" href="mailto:hello@example.com">hello@example.com <span>↗</span></a>
+        </section>
+      </main>
+      <footer><span>© 2026 Your Name</span><span>Built with care, everywhere.</span></footer>
+    </div>
+  </body>
+</html>
